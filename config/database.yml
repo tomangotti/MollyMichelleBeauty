@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: molly_michelle_beauty_production
-  username: molly_michelle_beauty
-  password: <%= ENV["MOLLY_MICHELLE_BEAUTY_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: molly_michelle_beauty_production
+  # username: molly_michelle_beauty
+  # password: <%= ENV["MOLLY_MICHELLE_BEAUTY_DATABASE_PASSWORD"] %>
