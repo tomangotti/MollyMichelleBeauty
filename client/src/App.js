@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
+import {HashRouter} from "react-router-dom"
+
+import NavBar from "./components/Navbar";
+import Contact from "./components/Contact";
+import About from "./components/About";
+import HairStyleContainer from "./components/HairStyleContainer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+  
 
   return (
-    <div className="App">
-      <h1>Page Count: {count}</h1>
-    </div>
+    <HashRouter>
+      <NavBar />
+      <About />
+      <HairStyleContainer />
+      <Contact />
+    </HashRouter>
   );
 }
 

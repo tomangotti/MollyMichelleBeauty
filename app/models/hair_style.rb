@@ -1,0 +1,2 @@
+class HairStyle < ApplicationRecord
+end
