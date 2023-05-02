@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
-    @post = Post.new(post_params.except(:images, :title))
+    @post = Post.create!(post_params.except(:image, :title))
     images = params[:post][:images]
 
     if images
@@ -34,6 +34,11 @@ class PostsController < ApplicationController
     else
       render json: @post.errors, status: :unprocessable_entity
     end
+  end
+
+  def latest
+    @post = Post.last
+    render json: @post
   end
 
   # PATCH/PUT /posts/1
@@ -58,6 +63,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, images: [])
+      params.permit(:title, :image)
     end
 end
