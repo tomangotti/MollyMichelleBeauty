@@ -31,19 +31,34 @@ function NavBar({admin, setAdmin}){
         setLoginForm(!loginForm)
     }
 
+    function handleLogOut(){
+        fetch('/admin_logout',{
+            method: "DELETE",
+        })
+        .then(r => {
+            if(r.ok){
+                r.json().then(
+                    setAdmin(null)
+                )
+            }
+        })
+
+    }
+
     return(
     <>
     <div className="navbar">
         <h1> Molly Michelle Beauty</h1>
     </div>
+    
     <div className="nav_buttons">
         <h3 className="button" >About</h3>
         <h3 className="button" >Hair Styles</h3>
         <h3 className="button" >Contact</h3>
     </div>
+    
     <div className="login">
-        
-    <h5 style={{float: "right"}} onClick={handleClickLogin}>Admin Login</h5>
+        <h5 onClick={handleClickLogin}>Admin Login</h5>
         {loginForm ? <div className="login_form">
             <form onSubmit={handleLogin}>
                 <label>Email </label>
@@ -51,8 +66,9 @@ function NavBar({admin, setAdmin}){
                 <label>Password </label>
                 <input type="password" name="password" /><br></br>
                 <h6>{admin ? "Admin logged in" : null}</h6>
-                {admin ? <button>Log Out</button> : <button>Login</button>}
+                {admin ? null : <button>Login</button>}
             </form>
+            {admin ? <button onClick={handleLogOut}>Log Out</button> : null}
         </div> : null }
     </div>
     </>
