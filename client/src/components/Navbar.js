@@ -25,6 +25,8 @@ function NavBar({admin, setAdmin}){
             }
         })
         e.target.reset()
+
+        
     }
 
     function handleClickLogin(){
@@ -56,7 +58,7 @@ function NavBar({admin, setAdmin}){
         <h3 className="button" >Hair Styles</h3>
         <h3 className="button" >Contact</h3>
     </div>
-    
+
     <div className="login">
         <h5 onClick={handleClickLogin}>Admin Login</h5>
         {loginForm ? <div className="login_form">

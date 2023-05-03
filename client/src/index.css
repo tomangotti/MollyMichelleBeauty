@@ -100,3 +100,29 @@ body {
     width: 300px;
     padding: 15px;
 }
+
+
+/* About me section */
+
+.about {
+    border: white 5px solid;
+    border-radius: 10px;
+    background-color: white;
+    width: 50%;
+    margin: 25px auto;
+}
+
+.about img{
+    width: 200px;
+    display: block;
+    margin: 15px auto;
+    border: pink 3px solid;
+    border-radius: 100%;
+}
+
+.about p{
+    text-align: center;
+    color: pink;
+    width: 80%;
+    margin: 15px auto;
+}
