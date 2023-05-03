@@ -12,7 +12,7 @@ body {
     color: pink;
     width: 100%;
     padding: 15px 10px;
-    margin: -10px -10px 15px -10px;
+    margin: -10px 0px 15px -10px;
     text-align: center;
     font-size: 35px;
 }
@@ -22,24 +22,13 @@ body {
     display: flex;
     margin: auto;
     width: 45%;
-    min-width: 450px;
-    border: 3px solid white;
-
+    min-width: 350px;
+    /* border: 3px solid white; */
     border-radius: 5px;
     padding: 10px;
     color: pink;
 }
 
-/* .button {
-    text-align: center;
-    margin: auto;
-    width: 115px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px black;
-    background-color: white;
-    cursor: pointer;
-    font-size: 20px;
-} */
 
 .button{
     margin: auto;

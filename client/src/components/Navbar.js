@@ -42,8 +42,8 @@ function NavBar({admin, setAdmin}){
         <h3 className="button" >Contact</h3>
     </div>
     <div className="login">
-        <button onClick={handleClickLogin}>Admin Login</button>
         
+    <h5 style={{float: "right"}} onClick={handleClickLogin}>Admin Login</h5>
         {loginForm ? <div className="login_form">
             <form onSubmit={handleLogin}>
                 <label>Email </label>
