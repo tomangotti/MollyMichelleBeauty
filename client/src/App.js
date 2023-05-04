@@ -23,7 +23,7 @@ function App() {
       <NavBar admin={admin} setAdmin={setAdmin} />
       <About />
       <HairStyleContainer />
-      <Contact />
+      <Contact admin={admin} setAdmin={setAdmin} />
     </HashRouter>
   );
 }
