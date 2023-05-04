@@ -6,6 +6,10 @@ body {
 
 
 /* NAVBAR / login */
+/* NAVBAR / login */
+/* NAVBAR / login */
+/* NAVBAR / login */
+/* NAVBAR / login */
 
 .navbar {
     background-color: rgb(255, 255, 255);
@@ -86,6 +90,10 @@ body {
 
 
 /* Admin log in */
+/* Admin log in */
+/* Admin log in */
+/* Admin log in */
+/* Admin log in */
 .login {
     float: right;
 }
@@ -102,6 +110,12 @@ body {
 }
 
 
+
+
+/* About me section */
+/* About me section */
+/* About me section */
+/* About me section */
 /* About me section */
 
 .about {
@@ -125,4 +139,35 @@ body {
     color: pink;
     width: 80%;
     margin: 15px auto;
+}
+
+/* hair style cards */
+/* hair style cards */
+/* hair style cards */
+/* hair style cards */
+/* hair style cards */
+
+.hairStyle {
+    text-align: center;
+    
+    margin: 25px auto;
+}
+
+.hairStyle h1 {
+    color: white;
+}
+
+.hairStyleCard {
+    border: white 1px solid;
+    border-radius: 10px;
+    width: 50%;
+    background-color: white;
+    margin: 20px auto;
+}
+
+.hairStyleCard img{
+    width: 300px;
+    border: pink 3px solid;
+    border-radius: 50%;
+    margin: 5px auto;
 }

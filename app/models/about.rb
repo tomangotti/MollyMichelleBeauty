@@ -1,3 +1,3 @@
 class About < ApplicationRecord
-  belongs_to :Admin
+  belongs_to :admin
 end

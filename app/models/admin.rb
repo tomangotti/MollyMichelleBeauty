@@ -1,6 +1,4 @@
 class Admin < ApplicationRecord
     has_secure_password
-    
-    has_one :about
-    
+    has_many :abouts
 end

@@ -1,4 +1,4 @@
 class AboutSerializer < ActiveModel::Serializer
   attributes :id, :bio
-  has_one :Admin
+  # has_one :admin
 end
