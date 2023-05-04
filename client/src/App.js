@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {HashRouter} from "react-router-dom"
+import { Route, Switch } from 'react-router-dom'
 
 import NavBar from "./components/Navbar";
 import Contact from "./components/Contact";
@@ -21,9 +22,19 @@ function App() {
   return (
     <HashRouter>
       <NavBar admin={admin} setAdmin={setAdmin} />
-      <About />
-      <HairStyleContainer />
-      <Contact admin={admin} setAdmin={setAdmin} />
+      <Switch>
+        <Route exact path="/"></Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/styles" >
+          <HairStyleContainer />
+        </Route>
+        <Route path="/contact" >
+          <Contact admin={admin} setAdmin={setAdmin} />
+        </Route>
+      </Switch>
+      
     </HashRouter>
   );
 }

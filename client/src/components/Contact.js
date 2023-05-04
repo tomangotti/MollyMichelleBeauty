@@ -57,8 +57,8 @@ function Contact({admin, setAdmin}){
                 <td>Email</td>
             </thead>
             <tr>
-                <td>304-641-0696</td>
-                <td>sample-email</td>
+                <td><a href="tel:3046410696">304-641-0696</a></td>
+                <td><a href = "mailto: abc@example.com">Send Email</a></td>
             </tr>
         </table>
         <table className="hours-days" >
