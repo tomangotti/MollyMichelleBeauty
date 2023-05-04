@@ -123,6 +123,8 @@ body {
     border-radius: 10px;
     background-color: white;
     width: 60%;
+    min-width: 350px;
+    max-width: 500px;
     margin: 25px auto;
 }
 
@@ -161,13 +163,22 @@ body {
     border: white 1px solid;
     border-radius: 10px;
     width: 50%;
+    min-width: 350px;
+    max-width: 450px;
     background-color: white;
     margin: 20px auto;
 }
 
 .hairStyleCard img{
     width: 300px;
+    
     border: pink 3px solid;
     border-radius: 50%;
     margin: 5px auto;
+}
+
+.hairStyleContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

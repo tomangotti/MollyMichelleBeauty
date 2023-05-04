@@ -1,3 +1,3 @@
 class HairStyleSerializer < ActiveModel::Serializer
-  attributes :id, :description, :full_bio, :price, :length
+  attributes :id, :description, :name, :price, :length
 end

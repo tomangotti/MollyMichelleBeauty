@@ -9,7 +9,6 @@ function About() {
             if(r.ok){
                 r.json().then((data) => {
                     setAbout(data[0])
-                    console.log(data[0])
                 })
             }
         }
