@@ -19,11 +19,10 @@ function HairStyleContainer() {
     },[])
 
     if(hairStyles === null){
-        return(<div class="loader"></div>)
+        return(<div className="loader"></div>)
     }
 
     const hairStyleCards = hairStyles.map((hairStyle) => {
-        console.log(hairStyle)
         return <HairStyleCard key={hairStyle.id} hairStyle={hairStyle}/>
     })
 

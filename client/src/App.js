@@ -6,6 +6,8 @@ import NavBar from "./components/Navbar";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import HairStyleContainer from "./components/HairStyleContainer";
+import AdminLogin from "./components/AdminLogin";
+import AdminPage from "./components/AdminPage";
 
 function App() {
   const [admin, setAdmin] = useState(null)
@@ -31,7 +33,13 @@ function App() {
           <HairStyleContainer />
         </Route>
         <Route path="/contact" >
-          <Contact admin={admin} setAdmin={setAdmin} />
+          <Contact  />
+        </Route>
+        <Route path="/admin_login">
+          <AdminLogin admin={admin} setAdmin={setAdmin} />
+        </Route>
+        <Route path="/admin_page">
+          <AdminPage admin={admin} setAdmin={setAdmin} />
         </Route>
       </Switch>
       
