@@ -50,27 +50,11 @@ function Contact({admin, setAdmin}){
 
     return(
     <>
-    <div className="contact-container">
-        <table className="contact" >
-            <thead>
-                <td>Phone</td>
-                <td>Email</td>
-            </thead>
-            <tr>
-                <td><a href="tel:3046410696">304-641-0696</a></td>
-                <td><a href = "mailto: abc@example.com">Send Email</a></td>
-            </tr>
-        </table>
-        <table className="hours-days" >
-            <tr>
-                <td>Days</td>
-                <td>Hours</td>
-            </tr>
-            <tr>
-                <td>M-W-Th</td>
-                <td>7am - 5pm</td>
-            </tr>
-        </table>
+    <div className="contactContainer">
+        <h2>Contact Me</h2>
+        <h4>Phone: <a href="tel:3046410696">304-641-0696</a></h4>
+        <h4>Email: <a href = "mailto: abc@example.com">Molly@gmail.com</a></h4>
+        <h4>Social: <a href="https://www.instagram.com/mollymichelle_beauty/?hl=en">Instagram</a></h4>
     </div>
     <div className="login">
         <h5 onClick={handleClickLogin}>Admin Login</h5>

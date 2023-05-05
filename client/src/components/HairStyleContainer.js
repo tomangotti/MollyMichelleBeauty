@@ -19,7 +19,7 @@ function HairStyleContainer() {
     },[])
 
     if(hairStyles === null){
-        return(<h1>loading...</h1>)
+        return(<div class="loader"></div>)
     }
 
     const hairStyleCards = hairStyles.map((hairStyle) => {
