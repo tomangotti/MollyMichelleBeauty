@@ -79,6 +79,7 @@ function AdminPage({admin, setAdmin}) {
                 method: "PATCH",
                 body: formData
             }).then(r=>r.json().then((data)=>{
+                console.log(data)
                 setImage(data.photo)
                 
             }))
