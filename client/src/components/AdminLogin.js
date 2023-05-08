@@ -1,7 +1,9 @@
+import { useState } from "react";
 import {useHistory} from "react-router-dom"
 
 function AdminLogin({admin, setAdmin}){
     const history = useHistory();
+    const [errors, setErrors] = useState([])
 
 
     function handleLogin(e){
@@ -23,6 +25,10 @@ function AdminLogin({admin, setAdmin}){
                     setAdmin(user)
                     history.push("/admin_page")
                 })
+            }else{
+                r.json().then(err => {
+                    setErrors(err.errors)
+                })
             }
         })
         e.target.reset()
@@ -30,7 +36,9 @@ function AdminLogin({admin, setAdmin}){
         
     }
 
-
+    const errorHandling = errors.map((error, index) => {
+        return (<h5 style={{color: "red", backgroundColor: "white"}} key={index}>{error}!</h5>)
+    })
 
 
     return(
@@ -43,6 +51,7 @@ function AdminLogin({admin, setAdmin}){
                 <h6>{admin ? "Admin logged in" : null}</h6>
                 <button>Login</button>
             </form>
+            {errors ? errorHandling : null}
         </div>
     )
 }
