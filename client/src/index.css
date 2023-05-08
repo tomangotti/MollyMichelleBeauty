@@ -277,6 +277,12 @@ a:active { text-decoration: none; }
     height: 50px;
 }
 
+.editAboutForm img {
+    width: 250px;
+    border: white 5px solid;
+    border-radius: 100%;
+}
+
 /* edit hair style form */
 /* edit hair style form */
 /* edit hair style form */
