@@ -6,7 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts "seeding started"
-admin = Admin.create(first_name: "Thomas", last_name: "Angotti", email: "tom.angotti11@gmail.com", password: "TRAmmb6393")
+About.destroy_all
+Admin.destroy_all
+
+admin1 = Admin.create(first_name: "Thomas", last_name: "Angotti", email: "tom.angotti11@gmail.com", password: "TRAmmb6393")
+admin = Admin.create(first_name: "Molly", last_name: "Sestito", email: "Mollymichellebeauty@gmail.com", password: "Michelle22*")
+about = About.create(bio: "New bio here", admin_id: admin.id)
 # admin = Admin.first
 # about = About.create(bio: "Molly Michelle Sestito is a skilled and passionate hair stylist, dedicated to creating beautiful and unique hairstyles that bring out the best in her clients.", admin_id: admin)
 # hair0 = HairStyle.create(description: "change some of your hair colour!", name: "Highlights", price: 200, length: "90 minutes")

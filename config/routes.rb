@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :profile_images
   resources :posts
   resources :abouts
-  resources :admins
+  resources :admin
   resources :hair_styles
   
   delete "/admin_logout", to: "sessions#admin_destroy"

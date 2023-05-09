@@ -11,6 +11,7 @@ class ProfileImagesController < ApplicationController
 
   # GET /profile_images/1
   def show
+    @profile_image = ProfileImage.last
     render json: @profile_image
   end
 
