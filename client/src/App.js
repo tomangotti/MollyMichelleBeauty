@@ -13,10 +13,12 @@ function App() {
   const [admin, setAdmin] = useState(null)
 
   useEffect(() => {
-    fetch('/admin')
+    fetch('/admin_show')
     .then(r => {
       if (r.ok){
-        r.json().then(user => setAdmin(user))
+        r.json().then((user) => {
+          setAdmin(user)
+        })
       }
     })
   }, [])

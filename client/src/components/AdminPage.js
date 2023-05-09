@@ -15,7 +15,7 @@ function AdminPage({admin, setAdmin}) {
         .then((r) =>{
             if(r.ok){
                 r.json().then((data) => {
-                    setAbout(data[0])
+                    setAbout(data)
                 })
             }
         })
@@ -138,17 +138,16 @@ function AdminPage({admin, setAdmin}) {
     
     <button onClick={handleLogOut}>Logout</button>
     <h2 style={{backgroundColor: "white", textAlign: "center"}}>Edit Bio and Image</h2>
-        {about ? <div className="editAboutForm">
-            
+        <div className="editAboutForm">
             <form onSubmit={handleAboutUpdate}>
                 <label>Profile Image: </label>
                 <img src={image} />
                 <input type="file" onChange={(e) => setPhoto(e.target.files[0])} accept="photo/*" placeholder="Photo" className="file-input file-input-bordered w-full max-w-xs" name="photo"/><br></br>
                 <label>Bio: </label><br></br>
-                <textarea type="string" name="bio" defaultValue={about.bio} rows="10" cols="50"/>
+                <textarea type="string" name="bio" defaultValue={about ? about.bio : null} rows="10" cols="50"/>
                 <br></br><button>Save</button>
             </form>
-        </div> : null }
+        </div>
     <h2 style={{backgroundColor: "white", textAlign: "center"}}>Edit Hair Styles</h2>
     {hairStyleEditCard}
     <h2 style={{backgroundColor: "white", textAlign: "center"}}>Add Hair Styles</h2>
