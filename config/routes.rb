@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profile_images
   resources :posts
   resources :abouts
   resources :admins
@@ -9,3 +10,4 @@ Rails.application.routes.draw do
   get '/admin', to: "admins#admin_show_me"
   get '/latest', to: "posts#latest" 
 end
+

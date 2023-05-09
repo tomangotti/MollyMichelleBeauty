@@ -5,4 +5,17 @@ class AboutsController < ApplicationController
         about = Admin.first.abouts
         render json: about
     end
+
+    def update
+        about = About.find(params[:id])
+        about.update!(about_params)
+        render json: about
+    end
+
+
+    private
+    
+    def about_params
+        params.permit(:bio, :id, :about)
+    end
 end

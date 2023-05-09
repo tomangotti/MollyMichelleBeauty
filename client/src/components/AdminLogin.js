@@ -49,11 +49,11 @@ function AdminLogin({admin, setAdmin}){
         <div className="login_form">
             <form onSubmit={handleLogin}>
                 <label>First:  </label>
-                <input type="text" name="fname" /><br></br>
+                <input type="string" name="fname" /><br></br>
                 <label>Last:  </label>
-                <input type="text" name="lname" /><br></br>
+                <input type="string" name="lname" /><br></br>
                 <label>Email:  </label>
-                <input type="text" name="email" /><br></br>
+                <input type="string" name="email" /><br></br>
                 <label>Password:  </label>
                 <input type="password" name="password" /><br></br>
                 <label>Password confirm:  </label>

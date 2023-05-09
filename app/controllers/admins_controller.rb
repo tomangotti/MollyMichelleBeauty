@@ -6,5 +6,17 @@ class AdminsController < ApplicationController
             render json: admin
     end
 
+    def create
+        admin = Admin.create(admin_params)
+        about = About.create(bio: "Bio has not been updated")
+        session[:admin_id] = admin.id
+        render json: admin
+    end
 
+
+    private
+
+    def admin_params
+        params.permit(:first_name, :last_name, :email, :password, :password_confirmation, :id)
+    end
 end
