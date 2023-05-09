@@ -190,6 +190,23 @@ a:active { text-decoration: none; }
     justify-content: space-between;
 }
 
+.paragraph-section {
+    max-height: 25em; /* Adjust the height as needed */
+    overflow: hidden;
+    transition: max-height 0.3s ease; /* Add smooth transition effect */
+}
+
+.paragraph-section.collapsed {
+    max-height: 1.1em; /* Same as initial height */
+}
+
+.paragraph-section p {
+    margin: 0em; /* Remove default margin for the paragraph */
+}
+
+.paragraph-section button {
+    margin-top: 0em; /* Adjust spacing between paragraph and button */
+}
 
 /* Contact Card */
 /* Contact Card */
