@@ -75,8 +75,8 @@ function AdminPage({admin, setAdmin}) {
             const formData = new FormData()
             formData.append("photo", photo)
 
-            fetch(`/profile_images/1`,{
-                method: "PATCH",
+            fetch(`/profile_images`,{
+                method: "POST",
                 body: formData
             }).then(r=>r.json().then((data)=>{
                 console.log(data)

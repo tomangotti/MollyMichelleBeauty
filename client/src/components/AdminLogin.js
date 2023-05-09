@@ -9,12 +9,15 @@ function AdminLogin({admin, setAdmin}){
     function handleLogin(e){
         e.preventDefault()
         const info = {
+            first_name: e.target.fname.value,
+            last_name: e.target.lname.value,
             email: e.target.email.value,
-            password: e.target.password.value
+            password: e.target.password.value,
+            password_confirmation: e.target.password_confirmation.value,
         }
 
         console.log(info)
-        fetch('/admin_login', {
+        fetch('/admins', {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(info)
@@ -30,8 +33,9 @@ function AdminLogin({admin, setAdmin}){
                     setErrors(err.errors)
                 })
             }
+            e.target.reset()
         })
-        e.target.reset()
+        
 
         
     }
@@ -44,10 +48,16 @@ function AdminLogin({admin, setAdmin}){
     return(
         <div className="login_form">
             <form onSubmit={handleLogin}>
+                <label>First:  </label>
+                <input type="text" name="fname" /><br></br>
+                <label>Last:  </label>
+                <input type="text" name="lname" /><br></br>
                 <label>Email:  </label>
                 <input type="text" name="email" /><br></br>
                 <label>Password:  </label>
                 <input type="password" name="password" /><br></br>
+                <label>Password confirm:  </label>
+                <input type="password" name="password_confirmation" /><br></br>
                 <h6>{admin ? "Admin logged in" : null}</h6>
                 <button>Login</button>
             </form>

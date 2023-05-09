@@ -197,7 +197,7 @@ a:active { text-decoration: none; }
 }
 
 .paragraph-section.collapsed {
-    max-height: 1.1em; /* Same as initial height */
+    max-height: 3.4em; /* Same as initial height */
 }
 
 .paragraph-section p {
