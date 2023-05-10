@@ -9,6 +9,7 @@ function AdminPage({admin, setAdmin}) {
     const [hairStyles, setHairStyles] = useState(null)
     const [photo, setPhoto] = useState(null)
     const [image, setImage] = useState(null)
+    const [hairPhoto, setHairPhoto] = useState(null)
 
     useEffect(() => {
         fetch('/abouts')
@@ -29,6 +30,14 @@ function AdminPage({admin, setAdmin}) {
             }
         })
 
+        fetch('/profile_images/1')
+        .then((r) => {
+            if(r.ok){
+                r.json().then((photo) => {
+                    setImage(photo.photo)
+                })
+            }
+        })
         
     },[])
 
@@ -70,11 +79,8 @@ function AdminPage({admin, setAdmin}) {
         }
 
         if(e.target.photo.value){
-            console.log(e.target.photo.value)
-
             const formData = new FormData()
             formData.append("photo", photo)
-
             fetch(`/profile_images`,{
                 method: "POST",
                 body: formData
@@ -83,7 +89,6 @@ function AdminPage({admin, setAdmin}) {
                 setImage(data.photo)
                 
             }))
-
         }
         
         console.log(updateAbout)
@@ -111,12 +116,18 @@ function AdminPage({admin, setAdmin}) {
             description: e.target.description.value
         }
 
+        const formData = new FormData()
+            formData.append("photo", hairPhoto)
+            formData.append("name", e.target.name.value)
+            formData.append("price", e.target.price.value)
+            formData.append("length", e.target.length.value)
+            formData.append("description", e.target.description.value)
+
         
 
         fetch('hair_styles', {
             method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(newHairStyle)
+            body: formData
         })
         .then((r) => {
             if(r.ok){
@@ -155,6 +166,7 @@ function AdminPage({admin, setAdmin}) {
         <form onSubmit={handleNewStyle}>
             <label>Name: </label>
             <input name="name" type="string" /><br></br>
+            <input type="file" onChange={(e) => setHairPhoto(e.target.files[0])} accept="photo/*" placeholder="Photo" className="file-input file-input-bordered w-full max-w-xs" name="photo"/><br></br>
             <label>Price: $ </label>
             <input name="price" type="number" /><br></br>
             <label>Length: </label>

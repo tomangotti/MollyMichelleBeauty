@@ -14,8 +14,12 @@ class HairStylesController < ApplicationController
 
     def update
         hair = HairStyle.find(params[:id])
-        hair.update(hair_params)
-        render json: hair
+        if hair.update(hair_params)
+            render json: hair, status: :accepted
+        else
+            render json: hair.errors, status: :unprocessable_entity
+        end
+        
     end
 
     def destroy
@@ -28,6 +32,6 @@ class HairStylesController < ApplicationController
     private
 
     def hair_params
-        params.permit(:id, :name, :price, :length, :description)
+        params.permit(:id, :name, :price, :length, :description, :photo, :hair_styles)
     end
 end

@@ -11,10 +11,10 @@ function HairStyleCard({hairStyle}) {
         <>
             <div className="hairStyleCard">
                 <h2>{hairStyle.name}</h2>
-                <img src="https://i2.wp.com/www.hadviser.com/wp-content/uploads/2020/08/18-cute-long-boho-style-CCgr-3aJKmM.jpg?resize=1017%2C1326&ssl=1"/>
+                <img src={hairStyle.photo}/>
                 <h5>price: ${hairStyle.price}</h5>
                 <h5>{hairStyle.length}</h5>
-                <h5><a href="https://l.instagram.com/?u=https%3A%2F%2Fwww.vagaro.com%2Fcolorbyhandm%2Fbook-now&e=AT3DJvnc1m7JgsBf9MGprDMuAJYGNTVNxGoLyM7s4eJMBvfafqlC2rwVeaPfOZvInPwFrPkPfh1U_MvcofZyAhUc6OQFod2jDK6AIWt10wKLAnCq">BOOK NOW</a></h5>
+                <h5><a href="https://www.vagaro.com/colorbyhandm/book-now">BOOK NOW</a></h5>
                 <div className={`paragraph-section ${expanded ? '' : 'collapsed'}`}>
                     <p>{hairStyle.description}</p>
                 </div>

@@ -6,3 +6,4 @@ class ProfileImageSerializer < ActiveModel::Serializer
     rails_blob_path(object.photo, only_path: true) if object.photo.attached?
   end
 end
+

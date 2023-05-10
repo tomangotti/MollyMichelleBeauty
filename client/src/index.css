@@ -332,6 +332,13 @@ a:active { text-decoration: none; }
     padding: 10px
 }
 
+.hairStyleEditForm img{
+    width: 200px;
+    border: white 3px solid;
+    border-radius: 100%;
+    margin: 5px;
+}
+
 
 
 /* Add Hair Style Form */
