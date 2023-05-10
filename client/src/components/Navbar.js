@@ -11,7 +11,7 @@ function NavBar(){
     return(
     <>
     <div className="navbar">
-        <h1> Molly Michelle Beauty</h1>
+        <h1>Molly Michelle Beauty</h1>
     </div>
     <NavLink to="/about"></NavLink>
     <div className="nav_buttons">
