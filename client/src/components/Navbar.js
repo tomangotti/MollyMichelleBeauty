@@ -18,7 +18,6 @@ function NavBar(){
         <NavLink to="/about" style={{margin: "auto"}}><h3 className="button" >About</h3></NavLink>
         <NavLink to="/styles" style={{margin: "auto"}}><h3 className="button" >Hair Styles</h3></NavLink>
         <NavLink to="/contact" style={{margin: "auto"}}><h3 className="button" >Contact</h3></NavLink>
-        
     </div>
 
     </>

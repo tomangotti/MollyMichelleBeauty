@@ -27,7 +27,9 @@ function App() {
     <HashRouter>
       <NavBar admin={admin} setAdmin={setAdmin} />
       <Switch>
-        <Route exact path="/"></Route>
+        <Route exact path="/">
+          <HairStyleContainer />
+        </Route>
         <Route path="/about">
           <About />
         </Route>
