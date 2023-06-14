@@ -22,12 +22,19 @@ function ReviewPosts(){
     }
 
     const postList = posts.map((post) => {
-        <RenderReviewEditPost key={post.id} post={post} />
+        return <RenderReviewEditPost key={post.id} post={post} removePost={removePost}/>
     })
+
+    function removePost(id){
+        const filteredPost= posts.filter((post) => {
+            return post.id !== id
+        })
+        setPosts(filteredPost)
+    }
 
     function handleNewPost(e){
         e.preventDefault()
-        if(posts.length > 11){
+        if(posts.length > 10){
             alert('You have a max of 10 reviews, please delete one.')
         }else{
             const formData = new FormData()
@@ -68,6 +75,9 @@ function ReviewPosts(){
                     <input type="text" name="description" /><br></br>
                     <button>ADD</button>
                 </form>
+            </div>
+            <div>
+                {postList}
             </div>
         </div>
     )
