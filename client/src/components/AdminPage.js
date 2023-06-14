@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import {useHistory} from "react-router-dom"
 import HairStyleEditForm from "./HairStyleEditForm";
+import ReviewPosts from "./ReviewPosts";
 
 
 function AdminPage({admin, setAdmin}) {
@@ -177,6 +178,8 @@ function AdminPage({admin, setAdmin}) {
             <button>Add New Style</button>
         </form>
     </div>
+    <h2 style={{backgroundColor: "white", textAlign: "center"}}>Review Posts</h2>
+    <ReviewPosts />
     </>
     )
 }
