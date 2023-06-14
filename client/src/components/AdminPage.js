@@ -87,7 +87,7 @@ function AdminPage({admin, setAdmin}) {
             }).then(r=>r.json().then((data)=>{
                 console.log(data)
                 setImage(data.photo)
-                
+                alert('Profile image updated')
             }))
         }
         
@@ -134,6 +134,7 @@ function AdminPage({admin, setAdmin}) {
                 r.json().then((data) => {
                     setHairStyles([...hairStyles, data])
                     e.target.reset()
+                    alert('new hair style added!')
                 })
             }
         })

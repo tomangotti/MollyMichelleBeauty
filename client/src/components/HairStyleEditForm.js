@@ -33,6 +33,7 @@ function HairStyleEditForm({hairStyle, removeHairStyle}) {
         .then((r) => {
             if(r.ok){
                 r.json().then((data) =>{
+                    alert('Hair style updated')
                     console.log(data)
                 })
             }
